@@ -13,12 +13,12 @@ TestMod.launch = function(){
 		if (Game.prefs.popups) Game.Popup(TestMod.name + ' loaded!');
 		else Game.Notify(TestMod.name + ' loaded!', '', '', 1, 1);
   }
-  if(CCSE.ConfirmGameVersion(TestMod.name, TestMod.version, TestMod.GameVersion)) MyMod.init();
+  if(CCSE.ConfirmGameVersion(TestMod.name, TestMod.version, TestMod.GameVersion)) TestMod.init();
 }
 
-if(!MyMod.isLoaded){
+if(!TestMod.isLoaded){
 	if(CCSE && CCSE.isLoaded){
-		MyMod.launch();
+		TestMod.launch();
 	}
 	else{
 		if(!CCSE) var CCSE = {};
